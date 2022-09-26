@@ -43,6 +43,13 @@ const MessageSideView = styled.span`
     font-size: 0.85rem;
     color: grey;
 `;
+const ChatOptionBackground = styled.div`
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    justify-content: space-between;
+`;
 
 export {
     SidebarBackground,
@@ -51,4 +58,5 @@ export {
     UserWindowBackground,
     UserWindowDate,
     MessageSideView,
+    ChatOptionBackground,
 };

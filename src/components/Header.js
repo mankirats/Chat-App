@@ -4,7 +4,7 @@ import { HeaderBackground } from "./CustomStyle";
 function Header() {
     return (
         <HeaderBackground>
-            Chat App
+            <div>Chat App</div>
             <ChatOptions></ChatOptions>
         </HeaderBackground>
     );
