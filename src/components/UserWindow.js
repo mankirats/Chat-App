@@ -3,15 +3,16 @@ import {
     UserWindowBackground,
     UserWindowDate,
     MessageSideView,
+    MessageContainer,
 } from "./CustomStyle";
 function UserWindow(props) {
     return (
         <UserWindowBackground>
-            <div>
+            <MessageContainer>
                 {props.userName}
-                <br />
+
                 <MessageSideView>{props.message}</MessageSideView>
-            </div>
+            </MessageContainer>
             <UserWindowDate className>{props.datetime}</UserWindowDate>
         </UserWindowBackground>
     );
