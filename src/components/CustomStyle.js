@@ -39,8 +39,8 @@ const UserWindowBackground = styled.div`
 const UserWindowDate = styled.span`
     display: flex;
     flex-direction: column;
-    flex: 0.35;
-    /* margin-left: auto; */
+    flex: ${(props) => (props.chat ? "0.12" : "0.35")};
+    margin-left: auto;
     font-size: 0.8rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -62,9 +62,35 @@ const ChatOptionBackground = styled.div`
     width: 4rem;
     justify-content: space-between;
 `;
+const Container = styled.div`
+    display: flex;
+`;
+const MessageGroupContainer = styled(Container)`
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0.75;
+`;
+const MessageViewContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    background-color: ${(props) => (props.send ? "#FDB7B9" : "#F8E4DB")};
+    justify-self: ${(props) => (props.send ? "auto" : "0")};
+    border-radius: 5px;
+    /* flex: 0.7; */
+    width: fit-content;
+    overflow-wrap: break-word;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: auto;
+`;
 
 export {
+    MessageGroupContainer,
+    Container,
     MessageContainer,
+    MessageViewContainer,
     SidebarBackground,
     MainComponentContainer,
     HeaderBackground,
