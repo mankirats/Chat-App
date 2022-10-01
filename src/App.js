@@ -1,13 +1,15 @@
 import "./App.css";
-import MainComponent from "./components/MainComponent";
-
+import MessageSideBar from "./Shared/Components/MessageSideBar";
+import Sidebar from "./Shared/Components/Sidebar";
+import Header from "./Shared/Components/Header";
+import { AppWrapper } from "./Shared/Components/CustomStyle";
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <MainComponent></MainComponent>
-            </header>
-        </div>
+        <AppWrapper>
+            <Header></Header>
+            <Sidebar></Sidebar>
+            <MessageSideBar></MessageSideBar>
+        </AppWrapper>
     );
 }
 
