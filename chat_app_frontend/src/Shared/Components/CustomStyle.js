@@ -1,9 +1,18 @@
 import styled from "styled-components";
 const AppWrapper = styled.section`
     width: 100%;
+    height: 100vh;
+    scrollbar-width: 3px;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 1px solid black;
+    }
 `;
 const Wrapper = styled.section`
     height: 10vh;
@@ -37,16 +46,17 @@ const SidebarWrapper = styled(Wrapper)`
     height: 100%;
     box-shadow: 0 2px 3px #c7ffd8;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: 3px;
 `;
 const MessageSideBarWrapper = styled(Wrapper)`
     /* padding: 0 0.5rem; */
     margin-top: 6rem;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     background: #f6f6f6;
     flex-basis: 65%;
     min-height: 100vh;
+    overflow-y: auto;
 `;
 const HeaderWrapper = styled(Wrapper)`
     background: #f6f6f6;
