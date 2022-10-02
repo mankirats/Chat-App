@@ -3,7 +3,7 @@ import { Wrapper, SidebarWrapper } from "./CustomStyle";
 import UserSidebar from "./UserSidebar";
 function Sidebar() {
     return (
-        <SidebarWrapper>
+        <SidebarWrapper padding="1rem">
             <UserSidebar></UserSidebar>
         </SidebarWrapper>
     );
